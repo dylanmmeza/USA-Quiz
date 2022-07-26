@@ -1,0 +1,420 @@
+/* ----- style.css ----- */
+* {
+    color: wheat;
+    margin: 0%;
+    padding: 0%;
+}
+
+html {
+    width: fit-content;
+    overflow-y: hidden;
+}
+
+body {
+    background-color: #01171b;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: .25fr 2fr .85fr;
+}
+
+/* ----- TOP BAR ----- */
+
+.Top_bar {
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    font-size: 30px;
+    font-weight: 900;
+    padding: 1% 0%;
+    vertical-align: middle;
+    line-height: 60px;
+
+}
+
+.Top_bar div {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.Timer {
+    grid-row: 1;
+    grid-column: 1;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 400;
+    color: white;
+    vertical-align: middle;
+    line-height: 75px;
+    padding: 1% 0%;
+    border: 1px dashed grey;
+}
+
+.MMS {
+    text-align: center;
+    padding: 1%;
+    grid-column: 3;
+    grid-row: 1;
+    font-size: 30px;
+    font-weight: 900;
+    padding: 1% 0%;
+    vertical-align: middle;
+    line-height: 75px;
+    color: cornflowerblue;
+}
+
+/* ----- CENTER DIV ----- */
+
+.Center_div {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    border: 5px solid #ccc;
+}
+
+.Center_div #question {
+    position: absolute;
+    text-align: center;
+    font-size: 25px;
+    width: 20%;
+    left: 40%;
+    margin-top: 1%;
+    grid-row: 1/2;
+    z-index: 2;
+}
+
+/* ----- LEFT TABLE ----- */
+
+.Left_Table {
+    grid-row: 2/3;
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 600px;
+}
+
+/* -- PL TABLE -- */
+
+.pl_div {
+    border: 3px solid yellow;
+    height: 290px;
+    border-radius: 10px;
+
+}
+
+#pl_table {
+    grid-row: 1/2;
+    border-collapse: collapse;
+    font-size: 20px;
+    width: 100%;
+
+}
+
+#Leaderboard_title {
+    margin: 10px 0px;
+    text-align: center;
+    color: yellow;
+}
+
+#pl_table thead {
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    font-family: cursive;
+}
+
+
+#pl_table tr,
+#gl_table tr {
+    height: 40px;
+    border-top: 1px solid white;
+
+}
+
+#pl_table tr:last-child,
+#gl_table tr:last-child {
+    height: 40px;
+}
+
+#pl_table td {
+    text-align: center;
+    width: 50%;
+}
+
+/* -- GL TABLE -- */
+.gl_div {
+    border: 3px solid lightgreen;
+    border-radius: 10px;
+    max-height: 290px;
+    overflow-y: scroll;
+}
+
+#gl_title {
+    padding: 10px 0px;
+    text-align: center;
+    color: lightgreen;
+    background-color: #01171b;
+    top: 0px;
+    position: sticky;
+    font-size: 25px;
+    font-weight: bolder;
+
+}
+
+#gl_table {
+    grid-row: 2/3;
+    font-size: 20px;
+    width: 100%;
+}
+
+#gl_table th {
+    font-family: cursive;
+    font-size: 16px;
+    max-width: 103px;
+    position: sticky;
+    top: 47.5px;
+    background-color: #01171b;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+
+#gl_table td {
+    text-align: center;
+    max-width: 103px;
+
+    border-bottom: 1px solid white;
+    overflow-wrap: break-word;
+}
+
+/* -- SCROLLBAR -- */
+
+::-webkit-scrollbar {
+    width: 10px;
+    direction: ltr;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: lightgreen;
+    border-radius: 30px;
+}
+
+/* -- RIGHT TABLE -- */
+
+.Right_Table {
+    grid-column: 3;
+    grid-row: 2/4;
+    max-height: 835px;
+    border: 3px solid #ccc;
+}
+
+#right_table {
+    font-size: 20px;
+    border-collapse: collapse;
+}
+
+.Right_Table td {
+    width: 100%;
+    padding: 0px 10px;
+}
+
+.Right_Table tr {
+    height: 33.4px;
+    border-bottom: 1px solid white;
+}
+
+/* -- BOTTOM TABLE -- */
+
+.Bottom_Table {
+    grid-column: 2;
+    grid-row: 3/4;
+    height: 100%;
+}
+
+#bottom_table {
+    height: 238px;
+    border: 5px solid #ccc;
+}
+
+#bottom_table td {
+    width: 10%;
+    height: 20%;
+
+}
+
+/* -- SVG -- */
+
+svg path {
+    fill: #00394f;
+    stroke: #eee;
+    stroke-width: .25;
+}
+
+svg path:hover {
+    fill: #006284;
+    transition: .6s;
+    cursor: pointer;
+}
+
+/* -- POPUP/GAME OVER -- */
+
+.popup {
+    cursor: pointer;
+}
+
+#game_over {
+    visibility: hidden;
+    background-color: rgb(255, 255, 255, .5);
+    top: 9%;
+    left: 19%;
+    position: absolute;
+    height: 600px;
+    width: 1010px;
+}
+
+.popup .popuptext {
+    color: black;
+    text-align: center;
+    font-size: 100px;
+    padding: 1% 0%;
+    position: absolute;
+    left: 25%;
+    top: 10%;
+}
+
+#refresh {
+    width: 200px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    top: 55%;
+    left: 40%;
+    position: absolute;
+}
+
+.Center_div .hidden {
+    visibility: hidden;
+}
+
+.final_time {
+    font-size: 65px;
+    position: absolute;
+    width: 200px;
+    height: 75px;
+    text-align: center;
+    top: 35%;
+    left: 40%;
+
+}
+
+.final_time,
+#final_time_minutes,
+#final_time_seconds {
+    color: gold;
+}
+
+/* -- LOGIN  -- */
+
+#login_button,
+#register_button {
+    color: black
+}
+
+.mini_table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    width: 300px;
+    height: 238px;
+    grid-column: 1;
+    grid-row: 3/4;
+}
+
+#sign_in_title {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    text-align: center;
+    font-size: 25px;
+    border: 1px solid white;
+    border-radius: 50px;
+    width: 150px;
+    margin: 2px 75px;
+    line-height: 40px;
+    background-color: rgb(255, 140, 108);
+    color: black;
+    font-weight: bold;
+}
+
+#username_text_field,
+#password_text_field {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    width: 150px;
+    height: 25px;
+    margin: 5px 75px;
+    color: black;
+
+}
+
+#password_text_field {
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+
+#login_button,
+#register_button {
+    width: 75px;
+    height: 25px;
+    margin: 15px 0px 0px 50px;
+}
+
+#login_button {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+#register_button {
+    grid-column: 2/3;
+    grid-row: 4/5;
+
+}
+
+#message {
+    grid-column: 1/2;
+    grid-row: 3;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#logout {
+    grid-column: 1;
+    grid-row: 6;
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid lightblue;
+    border-radius: 30px;
+    width: auto;
+    margin: 0px 80px;
+    margin-bottom: 15px;
+    line-height: 20px;
+    background-color: lightblue;
+    color: black;
+}
+
+/* -- RESTART GAME -- */
+
+#refresh_game {
+    position: absolute;
+    right: 20%;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    width: 75px;
+    height: 20px;
+    bottom: 28%;
+}
